@@ -1,0 +1,74 @@
+@mixin button-empty {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 17px 34px;
+    border: 2px solid $purple;
+    color: $purple;
+    border-radius: 10px;
+}
+
+@mixin button-full {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 19px 35px;
+    border: 2px solid $purple;
+    background-color: $purple;
+    color: $white;
+    border-radius: 10px;
+}
+
+@mixin title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    margin-bottom: 26px;
+    color: $black;
+}
+
+@mixin arrow-active {
+    svg {
+        path {
+            stroke: $white;
+        }
+        circle {
+            fill: $active;
+            stroke: $active;
+        }
+    }
+}
+
+@mixin arrow-focus {
+    svg {
+        path {
+            stroke: $white;
+        }
+        circle {
+            fill: $hover;
+        }
+    }
+}
+
+@mixin arrow-hover {
+    svg {
+        path {
+            stroke: $white;
+        }
+        circle {
+            fill: $purple;
+        }
+    }
+}
+@mixin arrow-transition {
+    svg {
+        path {
+            z-index: 10;
+            transition: stroke 0.3s ease-in-out;
+        }
+        circle {
+            fill: transparent;
+            transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
+        }  
+    }
+}
