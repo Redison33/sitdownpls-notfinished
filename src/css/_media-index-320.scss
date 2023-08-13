@@ -9,7 +9,6 @@
 
     .header {
         &-top {
-            // padding-top: 66px;
             .header__container {
                 flex-direction: column;
                 align-items: start;
@@ -112,19 +111,16 @@
                         }
                     }
                     .slide1 {
-                        // background-image: url('img/hero1-1.jpg');
                         .slide__content {
                             width: 204px;
                         }	
                     }
                     .slide2 {
-                        // background-image: url('img/hero1-1.jpg');
                         .slide__content {
                             width: 204px;
                         }	
                     }
                     .slide3 {
-                        // background-image: url('img/hero1-1.jpg');
                         .slide__content {
                             width: 204px;
                         }	
@@ -360,18 +356,18 @@
             }
         }
     } 
-    .feadback {
+    .feedback {
         margin-bottom: 69px;
         &__container  {
             background-image: none;
-            .feadback__title {
+            .feedback__title {
                 font-size: 24px;
             }
-            .feadback__form {
-                .feadback__btn {
+            .feedback__form {
+                .feedback__btn {
                     margin-bottom: 9px;
                 }
-                .feadback__label {
+                .feedback__label {
                     font-size: 12px;
                 }
             }

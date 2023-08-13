@@ -18,7 +18,7 @@ html {
 }
 
 .error-check .just-validate-error-label {
-	top: 12px;
+	top: 14px;
 	left: 4px;		
 }
 
@@ -114,6 +114,17 @@ body {
 	font-size: 9px;
 	line-height: 14px;
 	padding: 0px;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+	opacity: 1;
+	svg {
+		path {
+			stroke: $grey;
+		}
+		circle {
+			stroke: $grey;
+		}
+	}
 }
 
 .header {
@@ -797,18 +808,18 @@ body {
 			height: 32px;
 			transform: rotate(180deg);
 			@include arrow-transition;
-		}
-		.swiper-button-prev:focus-visible {
-			@include arrow-focus;
-		}
-		.swiper-button-prev:hover {
-			@include arrow-hover;
-		}
-		.swiper-button-prev:active {
-			@include arrow-active;
-		}
-		.swiper-button-prev::after {
-		display: none;
+			&:focus-visible {
+				@include arrow-focus;
+			}
+			&:hover {
+				@include arrow-hover;
+			}
+			&:active {
+				@include arrow-active;
+			}
+			&::after {
+				display: none;
+			}
 		}
 		.swiper-button-next {
 			outline: none;
@@ -817,19 +828,19 @@ body {
 			width: 32px;
 			height: 32px;
 			@include arrow-transition;
-		}
-		.swiper-button-next:focus-visible {
-			@include arrow-focus;
-		}
-		.swiper-button-next:hover {
-			@include arrow-hover;
-		}
-		.swiper-button-next:active {
-			@include arrow-active;
-		}
-		.swiper-button-next::after {
-			display: none;
+			&:focus-visible {
+				@include arrow-focus;
 			}
+			&:hover {
+				@include arrow-hover;
+			}
+			&:active {
+				@include arrow-active;
+			}
+			&::after {
+				display: none;
+			}
+		}
 		.swiper {
 			width: 100%;
 			min-height: 511px;
@@ -917,11 +928,22 @@ body {
 				.slide-big {
 					width: 48.9%;
 					.card {
+						background-repeat: no-repeat;
+						background-position: right 30px bottom 30px;
 						&__content {
 							max-width: 225px;
 						}
-					}
-					
+					}	
+				}
+				.slide-big-1 {
+					.card {
+						background-image: url(img/promo2-bg.png);
+					}	
+				}
+				.slide-big-2 {
+					.card {
+						background-image: url(img/promo5-bg.png);
+					}	
 				}
 			}
 		}
@@ -968,7 +990,7 @@ body {
 					justify-content: flex-end;
 					height: 100%;
 					background-color: $dark-white;
-					padding: 0 15px 30px 15px;
+					padding: 0px 15px 30px 15px;
 					border-radius: 10px;
 					&__rating {
 						position: absolute;
@@ -977,6 +999,13 @@ body {
 						font-size: 16px;
 						line-height: 130%;
 						color: $orange;
+					}
+					&__img {
+						display: flex;
+						img {
+							margin-left: auto;
+							margin-right: auto;
+						}
 					}
 					&__content {
 						padding-left: 15px;
@@ -987,12 +1016,12 @@ body {
 							font-size: 24px;
 							line-height: 130%;
 							color: $black;
-							margin-bottom: 24px;
+							margin-bottom: 23px;
 						}
 						.card__price {
 							font-size: 16px;
 							line-height: 130%;
-							margin-bottom: 20px;
+							margin-bottom: 24px;
 							color: $dark-grey;
 						}
 						.card__btn {
@@ -1016,11 +1045,6 @@ body {
 							color: $white;
 						}
 					}
-				}
-			}
-			&__item:last-child { 
-				img {
-					padding: 0 30px 0 30px;
 				}
 			}
 		}
@@ -1110,8 +1134,6 @@ body {
 							color: $purple;
 						}
 						&__link:active {
-							// background-color: inherit;
-							// outline: none;
 							color: $active;
 						}	
 					}
@@ -1258,18 +1280,18 @@ body {
 			height: 32px;
 			transform: rotate(180deg);	
 			@include arrow-transition;
-		}
-		.swiper-button-prev:focus-visible {
-			@include arrow-focus;
-		}
-		.swiper-button-prev:hover {
-			@include arrow-hover;
-		}
-		.swiper-button-prev:active {
-			@include arrow-active;
-		}
-		.swiper-button-prev::after {
-		display: none;
+			&:focus-visible {
+				@include arrow-focus;
+			}
+			&:hover {
+				@include arrow-hover;
+			}
+			&:active {
+				@include arrow-active;
+			}
+			&::after {
+				display: none;
+			}
 		}
 		.swiper-button-next {
 			outline: none;
@@ -1278,19 +1300,19 @@ body {
 			width: 32px;
 			height: 32px;
 			@include arrow-transition;
-		}
-		.swiper-button-next:focus-visible {
-			@include arrow-focus;
-		}
-		.swiper-button-next:hover {
-			@include arrow-hover;
-		}
-		.swiper-button-next:active {
-			@include arrow-active;
-		}
-		.swiper-button-next::after {
-			display: none;
+			&:focus-visible {
+				@include arrow-focus;
 			}
+			&:hover {
+				@include arrow-hover;
+			}
+			&:active {
+				@include arrow-active;
+			}
+			&::after {
+				display: none;
+			}
+		}
 		.swiper {
 			&-wrapper {
 				.swiper-slide {
@@ -1377,30 +1399,30 @@ body {
 	}
 }
 
-.feadback {
+.feedback {
 	margin-bottom: 70px;
 	&__container  {
-		background-image: url('img/feadback1.jpg');
+		background-image: url('img/feedback1.jpg');
 		background-repeat: no-repeat;
 		background-position: center right;
-		.feadback__title {
+		.feedback__title {
 			@include title;
 			margin-bottom: 9px;
 		}
-		.feadback__content {
+		.feedback__content {
 			max-width: 640px;
-			.feadback__text {
+			.feedback__text {
 				font-weight: 400;
 				font-size: 14px;
 				line-height: 19px;
 				color: $dark-grey;
 			}
 		}
-		.feadback__form {
+		.feedback__form {
 			margin-top: 16px;
 			.error-text {
 				width: 97.5%;
-				.feadback__input {
+				.feedback__input {
 					width: 100%;
 					background-color: $dark-white;
 					font-size: 16px;
@@ -1420,7 +1442,7 @@ body {
 				}
 			}
 		}
-		.feadback__btn {
+		.feedback__btn {
 			@include button-full;
 			display: block;
 			padding: 17px 32px;
@@ -1428,41 +1450,41 @@ body {
 			outline: none;
 			transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 			}
-		.feadback__btn:focus-visible {
+		.feedback__btn:focus-visible {
 			border-color: $active;
 			background-color: $hover;
 		}
-		.feadback__btn:hover {
+		.feedback__btn:hover {
 			background-color: $hover;
 			border-color: $hover;
 		}
-		.feadback__btn:active {
+		.feedback__btn:active {
 			background-color: $active;
 			border-color: $active;
 		}
-		.feadback__label {
+		.feedback__label {
 			font-size: 14px;
 			line-height: 19px;
 			color: $black;
 			padding-left: 22px;
-			.feadback__link {
+			.feedback__link {
 				color: $purple;
 				text-decoration: underline;
 				transition: color 0.3s ease-in-out;
 			}
-			.feadback__link:hover {
+			.feedback__link:hover {
 				color: $hover;
 			}
-			.feadback__link:active {
+			.feedback__link:active {
 				color: $active;
 			}
 		}
-		.feadback__check {
+		.feedback__check {
 			position: absolute;
 			z-index: -1;
 			opacity: 1;
 		}
-		.feadback__check+label::before {
+		.feedback__check+label::before {
 			content: "";
 			position: absolute;
 			top: 4px;
@@ -1473,7 +1495,7 @@ body {
 			border: 1px solid $grey;
 			border-radius: 2px;
 		}
-		.feadback__check:checked+label::before {
+		.feedback__check:checked+label::before {
 			background-color: $purple;
 			border-color: $purple;
 			background-image: url('img/check.png');

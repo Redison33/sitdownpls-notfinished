@@ -39,7 +39,6 @@ const swiper1 = new Swiper(".hero1__swiper",{
 });
 
 const swiper2 = new Swiper(".promo__swiper",{
-    // slidesPerView: "auto",
     spaceBetween: 32,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -60,7 +59,6 @@ const swiper2 = new Swiper(".promo__swiper",{
 });
 
 const swiper3 = new Swiper(".helpful__swiper",{
-    // slidesPerView: 3,
     spaceBetween: 32,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -87,7 +85,7 @@ tippy('#tooltip', {
     content: 'Реплицированные с зарубежных источников, исследования формируют глобальную сеть.',
   });
 
-const feadbackValidation = new JustValidate('.feadback__form', {
+const feedbackValidation = new JustValidate('.feedback__form', {
 errorLabelStyle: {
     color:'#FF6972'
 },
@@ -97,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const selector = document.querySelector("input[type='tel']");
 const im = new Inputmask("+7 (999)-999-99-99");
 im.mask(selector);
-feadbackValidation
+feedbackValidation
     .addField('.input-name', [{
         rule: 'required',
         errorMessage: "Недопустимый формат"

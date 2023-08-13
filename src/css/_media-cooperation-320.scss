@@ -1,0 +1,240 @@
+@import '_vars.scss';
+@import '_mixin.scss';
+@media (max-width: 700px) {
+
+    .container {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+
+    .header {
+        &-top {
+            .header__container {
+                flex-direction: column;
+                align-items: start;
+                .header__logo {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    padding-top: 12px;
+                    padding-bottom: 3px;
+                }
+                .header__wrap {
+                    display: none;
+                }
+                .header__select {
+                    margin-left: 12px;
+                    padding-top: 19px;
+                    padding-bottom: 21px;
+                }
+                .header__number {
+                    margin-right: 12px;
+                    margin-left: 16px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+        &-bottom {
+            position: relative;
+            .header__container {
+                padding-top: 0;
+                padding-bottom: 32px;
+                .header__wrap-top {
+                    border-top: 1px solid $dark-white;
+                    border-bottom: 1px solid $dark-white;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                    margin-bottom: 16px;
+                    .header__logo {
+                        display: none;
+                    }
+                    .nav {
+                        flex-direction: column;
+                        height: 533px;
+                        padding: 0;
+                        svg {
+                            display: none;
+                        }
+                        &__list-1 {
+                            flex-wrap: nowrap;
+                            padding: 62px 12px 26px 12px;
+                        }
+                        &__list-2 {
+                            display: flex;
+                        }
+                    }
+                    .burger {
+                        margin-right: 0px;
+                        margin-left: 4px;
+                        margin-top: 2px;
+                    }
+                }
+                .header__wrap-bottom {
+                    flex-direction: column;
+                    margin-bottom: 0;
+                    .header__search-form {
+                        width: 100%;
+                        margin-bottom: 15px;
+                        .header__search-input {
+                            border-radius: 10px;
+                        }
+                    }
+                    .choices {
+                        width: 100%;
+                    }
+                    .choices__inner {
+                        border-radius: 10px;
+                    }
+                }
+                .header__sites-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+    .provider {
+        margin-bottom: 34px;
+        &__container {
+            .provider__title {
+                font-size: 24px;
+            }
+            .provider__wrap {
+                .provider__title {
+                    font-size: 16px;
+                    margin-bottom: 14px;
+                }
+                .provider__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .get {
+        &__container {
+            .get__title {
+                font-size: 16px;
+                margin-bottom: 14px;
+            }
+            .get__text {
+                font-size: 14px;
+            }
+        }
+    }
+    .privilege {
+        margin-bottom: 32px;
+        &__container {
+            .privilege__title {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+            .privilege__wrap {
+                .privilege__step {
+                    margin-bottom: 12px;
+                }
+                .privilege__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .warranty {
+        &__container {
+            .warranty__title {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            .warranty__wrap {
+                .warranty__text {
+                    font-size: 14px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 11px;
+                }
+                &:nth-child(3) {
+                    margin-bottom: 9px;
+                }
+                &:nth-child(4) {
+                    margin-bottom: 30px;
+                }
+                &:last-child {
+                    gap: 16px;
+                    .warranty__img {
+                        min-width: 36px;
+                        min-height: 54px;
+                    }
+                    .warranty__text {
+                        // max-width: 190px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &-top {
+            .footer__container {
+                padding-bottom: 24px;
+                flex-direction: column;
+                .footer__left {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 25px;
+                    .footer__logo {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 15px;
+                    }
+                    .footer__links {
+                        text-align: center;
+                    }
+                }
+                .nav {
+                    padding-top: 0;
+                    flex-wrap: wrap;
+                    column-gap: 49px;
+                    row-gap: 27px;
+                    &__list {
+                        .nav__item:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                        .nav__item:first-child {
+                            margin-bottom: 7px;
+                         }     
+                    }
+                    &__list:nth-child(1) {
+                        margin-right: 25px;
+                    }
+                    &__list:nth-child(2) {
+                        margin-right: 0px;
+                    }
+                    &__list:nth-child(3) {
+                        margin-right: 0px;
+                        .nav__item:first-child {
+                            margin-bottom: 6px;
+                         } 
+                    }
+                    &__list:nth-child(4) {
+                        margin-right: 0px;
+                        .nav__item:first-child {
+                            margin-bottom: 6px;
+                         } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .warranty {
+        &__container {
+            .warranty__wrap {
+                &:last-child {
+                    .warranty__text {
+                        max-width: 190px;
+                    }
+                }
+            }
+        }
+    }
+}

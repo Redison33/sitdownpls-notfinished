@@ -46,9 +46,6 @@
                 .header__wrap-top {
                     .header__links {
                         display: flex;
-                        .header__link {
-                            // display: block;
-                        }
                     }
                     .nav {
                         margin-bottom: 0px;
@@ -175,9 +172,9 @@
             }
         }
     }
-    .feadback {
+    .feedback {
         &__container  {
-            background-image: url('img/feadback1-768.jpg');
+            background-image: url('img/feedback1-768.jpg');
             background-size: 187px 444px;
         }
     }

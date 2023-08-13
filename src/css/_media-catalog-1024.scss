@@ -1,0 +1,293 @@
+@import '_vars.scss';
+@import '_mixin.scss';
+
+@media (max-width: 1280px) {
+    .container {
+        margin-right: 36px;
+        margin-left: 36px;
+    }
+
+    .header {
+        &-top {
+            background-color: transparent;
+            .header__container {
+                flex-wrap: wrap;
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0;
+                .header__wrap {
+                    padding-left: 36px;
+                    padding-right: 36px;
+                    background-color: $dark-white;
+                    width: 100%;
+                    padding-top: 10px;
+                    padding-bottom: 9px;
+                    align-items: center;
+                    .nav {
+                        &__list {
+                            justify-content: space-between;
+                        }
+                    }
+                    .header__links {
+                        .header__link {
+                            display: block; 
+                        }
+                    }
+                }
+                .select {
+                    padding-top: 20px;
+                    padding-bottom: 18px;
+                    margin-left: 36px;
+                }
+                .choices__inner {
+                    background: transparent;
+                    border: 1px solid transparent;
+                }
+        
+                .header__number {
+                    margin-right: 36px;
+                }
+            }
+        }
+        &-bottom {
+            .header__container {
+                padding-top: 32px;
+                padding-bottom: 32px;
+                .header__wrap-top {
+                    margin-bottom: 24px;
+                    align-items: center;
+                    .nav {
+                        margin-bottom: 8px;
+                        &__list-1 {
+                            gap: 42px;
+                        }
+                    }
+                }
+                .header__wrap-bottom {
+                    .header__search-form {
+                        width: 68.5%;
+                        max-width: 100%;
+                        .header__search-input {
+                            padding: 22px 32px 19px 59px;
+                        }
+                    }
+                    .choices {
+                        margin-right: 0px;
+                    }
+                    .header__link {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        display: block;
+    }
+    .aside {
+    margin-top: 47px;
+    margin-bottom: 32px;
+        &__container {
+            max-width: $containerWidth1920;
+            display: flex;
+            gap: 43px;
+            align-items: center;
+            .aside__text {
+                display: none;
+            }
+            .aside__text {
+                margin: 0;
+            }
+            .aside__text-1024 {
+                display: block;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+            }
+            .aside__bonus {
+                display: none;
+            }
+            .aside__choice {
+                display: flex;
+                // gap: 32px;
+                justify-content: space-between;
+                width: 100%;
+                .checkbox {
+                    margin: 0;
+                    position: relative;
+                    &__name {
+                        display: none;
+                    }
+                    &__btn {
+                        display: flex;
+                        z-index: 2;
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                        &--active {
+                            border-color: $active;
+                            svg {
+                                transform: rotate(0);
+                                path {
+                                    fill: $active;
+                                }
+                            }
+                        }
+                    }
+                    &__list {
+                        width: 187px;
+                        border: 1px solid $footer-white;
+                        border-top: none;
+                        background-color: $white;
+                        padding: 40px 0 31px 31px;
+                        border-radius: 0 0 10px 10px;
+                        position: absolute;
+                        top: 22px;
+                        visibility: hidden;
+                        z-index: 1;
+                        &--active {
+                            visibility: visible;
+                        }
+                        .checkbox__label:not(:nth-last-child(1)) {
+                            margin-bottom: 11px;
+                        }
+                        .checkbox__btn-add {
+                            display: block;
+                        }
+                    }
+                }
+                .radio {
+                    margin: 0;
+                    position: relative;
+                    &__name {
+                        display: none;
+                    }
+                    &__btn {
+                        display: flex;
+                        z-index: 2;
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                        &--active {
+                            border-color: $active;
+                            svg {
+                                transform: rotate(0);
+                                path {
+                                    fill: $active;
+                                }
+                            }
+                        }
+                    }
+                    &__list {
+                        position: absolute;
+                        top: 22px;
+                        visibility: hidden;
+                        width: 187px;
+                        border: 1px solid $footer-white;
+                        border-top: none;
+                        background-color: $white;
+                        padding: 40px 0 32px 31px;
+                        border-radius: 0 0 10px 10px;
+                        z-index: 1;
+                        &--active {
+                            visibility: visible;
+                        }
+                    }
+                }
+                .range {
+                    position: relative;
+                    margin-bottom: 0;
+                    &__name {
+                        display: none;
+                    }
+                    &__btn {
+                        position: relative;
+                        display: flex;
+                        z-index: 2;
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                        &--active {
+                            border-color: $active;
+                            svg {
+                                transform: rotate(0);
+                                path {
+                                    fill: $active;
+                                }
+                            }
+                        }
+                    }
+                    &__inputs {
+                        width: 187px;
+                        border: 1px solid $footer-white;
+                        border-top: none;
+                        padding: 40px 0 29px 31px;
+                        border-radius: 0 0 10px 10px;
+                        background-color: $white;
+                        position: absolute;
+                        top: 22px;
+                        visibility: hidden;
+                        flex-direction: column;
+                        gap: 12px;
+                        z-index: 1;
+                        .range__wrap {
+                            .range__text {
+                                &-last {
+                                    margin-right: 7px;
+                                }
+                            }
+                            .range__input {
+                                &:not(:last-child) {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        &--active {
+                        visibility: visible;
+                        }
+                    }
+                    &__slider {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .catalog {
+        .container {
+            position: relative;
+            .catalog__title {
+                position: absolute;
+                top: -120px;
+            }
+        }
+    }
+    .footer {
+        &-top {
+            .footer__container {
+                display: flex;
+                padding-top: 23px;
+                padding-bottom: 20px;
+                .footer__left {
+                    .footer__logo {
+                        margin-bottom: 24px;
+                    }
+                }
+                .nav {
+                    display: flex;
+                    gap: 75px;
+                    &__list {
+                        .nav__item:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                        .nav__item:first-child {
+                            margin-bottom: 8px;
+ 
+                         }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -39,7 +39,6 @@ var swiper1 = new Swiper(".hero1__swiper", {
   }
 });
 var swiper2 = new Swiper(".promo__swiper", {
-  // slidesPerView: "auto",
   spaceBetween: 32,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -58,7 +57,6 @@ var swiper2 = new Swiper(".promo__swiper", {
   }
 });
 var swiper3 = new Swiper(".helpful__swiper", {
-  // slidesPerView: 3,
   spaceBetween: 32,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -83,7 +81,7 @@ tippy('#tooltip', {
   maxWidth: 165,
   content: 'Реплицированные с зарубежных источников, исследования формируют глобальную сеть.'
 });
-var feadbackValidation = new JustValidate('.feadback__form', {
+var feedbackValidation = new JustValidate('.feedback__form', {
   errorLabelStyle: {
     color: '#FF6972'
   }
@@ -93,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7 (999)-999-99-99");
   im.mask(selector);
-  feadbackValidation.addField('.input-name', [{
+  feedbackValidation.addField('.input-name', [{
     rule: 'required',
     errorMessage: "Недопустимый формат"
   }, {
